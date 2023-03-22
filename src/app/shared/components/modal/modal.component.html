@@ -1,0 +1,12 @@
+<div class="width-full height-full fixed flex background-darken">
+    <div class="background-solid width-md height-md">
+        <h2 *ngIf="winner">Player {{winner}} has won</h2>
+        <h2 *ngIf="tie">It's a tie</h2>
+        <h2 *ngIf="welcome">Welcome, Let's Play</h2>
+        
+        <button 
+            (click)="restartGame()"
+            class="button-game"
+        >Start New Game</button>
+    </div>
+</div>

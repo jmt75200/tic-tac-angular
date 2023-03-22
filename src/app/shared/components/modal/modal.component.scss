@@ -1,0 +1,46 @@
+.width{
+    &-full{
+        width: 100%;
+    }
+
+    &-md{
+        width: 40%;
+    }
+}
+
+.height{
+    &-full{
+        height: 100%;
+    }
+
+    &-md{
+        height: 300px;
+    }
+}
+
+.fixed{
+    position: fixed;
+    top:0;
+    left: 0;
+}
+
+.background{
+    &-darken{
+        background-color: rgba(0, 0, 0, 0.5)
+    }
+
+    &-solid{
+        background-color: #CCC;
+        padding: 20px;
+    }
+}
+
+.button-game{
+    padding: 20px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

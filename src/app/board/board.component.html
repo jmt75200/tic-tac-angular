@@ -1,0 +1,18 @@
+<h1>Current Player: {{ player }}</h1>
+
+<main>
+    <!-- Render a square per the length of the squares array -->
+    <app-square
+        *ngFor="let val of squares; let i = index"
+        [value]="val"
+        (click)="makeAMove(i)"
+    ></app-square>
+</main>
+
+<app-modal 
+    *ngIf="GeneralService.showModal"
+    [winner]="winner"
+    [tie]="tie"
+    [welcome]="welcome"
+    (click)="newGame()"
+></app-modal>
