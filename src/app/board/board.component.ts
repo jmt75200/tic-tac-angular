@@ -54,7 +54,7 @@ constructor(public GeneralService: GeneralService) {}
     if(this.player === 'O' && !this.winner) {
       setTimeout(() => [
         this.setAiMove()
-      ], 1000)
+      ], 2000)
     }
 
     if(this.limitMoves.length === 9 && !this.winner){
