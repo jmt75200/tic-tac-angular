@@ -1,12 +1,36 @@
-<div class="width-full height-full fixed flex background-darken">
-    <div class="background-solid width-md height-md">
-        <h2 *ngIf="winner">Player {{winner}} has won</h2>
-        <h2 *ngIf="tie">It's a tie</h2>
-        <h2 *ngIf="welcome">Welcome, Let's Play</h2>
-        
-        <button 
-            (click)="restartGame()"
-            class="button-game"
-        >Start New Game</button>
+<div class="width-full height-full fixed display-flex background-darken">
+    <div class="background-dark-solid width-md box-decor">
+        <div *ngIf="welcome">
+            <h2 class="text-light">Hey Commander</h2>
+            <p class="text-light">Looks like we are approaching an astroid field. It's time to launch our astroid torpedos to create a safe path through.</p>
+            <p class="text-light">Select a quadrant to guide the torpedos, but be careful the astroids may slip through.</p>
+            
+            <div class="display-flex flex-end">
+                <button (click)="restartGame()" class="button-game">Deploy Torpedos</button>
+            </div>
+        </div>
+        <div *ngIf="winner">
+            <div *ngIf="winner.includes('X')">
+                <h2 class="text-light">Good News Commander</h2>
+                <p class="text-light">We Made It Through! But just barely. If you want to practice, we can run the Astroid Field simulator.</p>
+                <div class="display-flex flex-end">
+                    <button (click)="restartGame()" class="button-game">Begin Simulation</button>
+                </div>
+            </div>
+            <div *ngIf="winner.includes('O')">
+                <h2 class="text-light">Bad News Commander</h2>
+                <p class="text-light">Status reports the ship has sustained too much damage and we are deep into the astroid field. When you're ready, we should keep going. Let's try again.</p>
+                <div class="display-flex flex-end">
+                    <button (click)="restartGame()" class="button-game">Deploy Torpedos</button>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="tie">
+            <h2 class="text-light">Good News Bad News Commander</h2>
+            <p class="text-light">Good news is we're almost through the astroid field. Bad News is we've sustained some damage. When you're ready, we should keep going. Let's try again.</p>
+            <div class="display-flex flex-end">
+                <button (click)="restartGame()" class="button-game">Deploy Torpedos</button>
+            </div>
+        </div>
     </div>
 </div>

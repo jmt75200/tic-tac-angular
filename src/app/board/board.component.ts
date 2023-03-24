@@ -46,11 +46,16 @@ constructor(public GeneralService: GeneralService) {}
   }
 
   makeAMove(idx: number) {
-    if(this.player === 'X'){
+
+    if(this.player === 'X' && !this.winner){
       this.setMove(idx)
     }
 
-    this.winner = this.calculateWinner();
+    if(this.player === 'O' && !this.winner) {
+      setTimeout(() => [
+        this.setAiMove()
+      ], 1000)
+    }
 
     if(this.limitMoves.length === 9 && !this.winner){
       this.tie = 'tie'
@@ -59,15 +64,9 @@ constructor(public GeneralService: GeneralService) {}
       this.GeneralService.showModal = true;
       // console.log('its a tie', this.winner, this.limitMoves)
     }
-
-    if(this.player === 'O' && !this.winner) {
-      setTimeout(() => [
-        this.setAiMove()
-      ], 1000)
-    }
   }
 
-  // dumb AI
+  // REALLY Dumb AI
   // TODO: USE MINIMAX to set score and allow the AI to choose the optimal move
   setAiMove(){
     let randomMove = Math.floor(Math.random() * (3) + 1)
@@ -95,6 +94,8 @@ constructor(public GeneralService: GeneralService) {}
       this.xIsNext = !this.xIsNext;
       // add turn to limit array
       this.limitMoves.push(this.player)
+
+      this.winner = this.calculateWinner();
     }
   }
 

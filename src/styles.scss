@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-image: linear-gradient(to left bottom, #051937, #011f51, #10246b, #2c2482, #4b1f97);
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+h2{
+    font-size: 2.5em;
+}
+.text {
+    &-light {
+        color: #FDF7FF;
+    }
+
+    &-center {
+        text-align: center;
+    }
+}
+
+.background-space {
+    background-image: url('./assets/asteroid-transparent-background.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: -1;
+}
+
+.width {
+    &-full {
+        width: 100vw;
+    }
+
+    &-md {
+        width: 40%;
+    }
+}
+
+.height {
+    &-full {
+        height: 100vh;
+    }
+
+    &-md {
+        height: 300px;
+    }
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}

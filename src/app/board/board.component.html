@@ -1,4 +1,10 @@
-<h1>Current Player: {{ player }}</h1>
+
+<h1 *ngIf="xIsNext" class="faux-padding text-light text-center">
+    Select a quadrant...
+</h1>
+<h1 *ngIf="player.includes('O')" class="faux-padding text-light text-center">
+    Evasive Action! Incoming Astroid!
+</h1>
 
 <main>
     <!-- Render a square per the length of the squares array -->

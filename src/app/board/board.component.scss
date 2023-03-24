@@ -2,9 +2,18 @@ main {
     display: grid;
     grid-template-columns: 200px 200px 200px;
     grid-gap: 0px;
+    margin: auto;
+    width: 600px;
+    background-color: rgba(255,255,255,0.2);
 }
 
 app-square {
-    border: 1px solid grey;
+    border: 1px solid #845EC2;
     height: 200px;
+    box-shadow: inset 1px 1px 2px #4B4453;
+}
+
+
+.faux-padding{
+    padding-top: 50px;
 }

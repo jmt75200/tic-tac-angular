@@ -1,46 +1,42 @@
-.width{
-    &-full{
-        width: 100%;
-    }
-
-    &-md{
-        width: 40%;
-    }
-}
-
-.height{
-    &-full{
-        height: 100%;
-    }
-
-    &-md{
-        height: 300px;
-    }
-}
-
-.fixed{
-    position: fixed;
-    top:0;
-    left: 0;
-}
-
 .background{
     &-darken{
         background-color: rgba(0, 0, 0, 0.5)
     }
-
     &-solid{
         background-color: #CCC;
-        padding: 20px;
+    }
+    &-dark-solid{
+        background-color: #4B4453;
+    }
+    &-lighten{
+        background-color: rgba(0,142,155, 0.6)
     }
 }
 
-.button-game{
+.box-decor{
     padding: 20px;
+    border-radius: 10px;
+    border: 3px solid #4FFBDF;
+}
+.button-game{
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background-color: #C34A36;
+    border: 1px solid #C34A36;
+    color: #FDF7FF;
+}
+
+.display-flex{
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    align-items: flex-start;
 }
 
 .flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    &-end {
+        justify-content: flex-end;
+    }
 }

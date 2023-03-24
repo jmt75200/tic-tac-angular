@@ -1,4 +1,25 @@
 button{
     height: 100%;
     width:100%;
+    font-size: 11em;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    img{
+        width: 80%;
+        height: auto;
+        &.icon-X{
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.X{
+    border: 1px solid #B0A8B9;
+    background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255, 255, 255, 0.1), #B0A8B9);
+
+}
+
+.O{
+    border: 1px solid #FF8066;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.1), #FF8066);
 }
